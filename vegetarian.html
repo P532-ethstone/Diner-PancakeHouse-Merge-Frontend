@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="index.css" rel="stylesheet"/>
+    <link href="vegetarian.css" rel="stylesheet"/>
 </head>
 <body>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">All Menus</a></li>
+        <li><a href="index.html">All Menus</a></li>
         <li><a href="pancakehouse.html">Breakfast</a></li>
         <li><a href="diner.html">Lunch</a></li>
         <li><a href="supper.html">Dinner</a></li>
-        <li><a href="vegetarian.html">Vegetarian</a></li>
+        <li><a href="vegetarian.html" class="active">Vegetarian</a></li>
       </ul>
       <div class="login"><a href="login.html">Login</a></div>
     </nav>
+
     <div id="menu" class="container">
-        <h1>Full Menu</h1>
+        <h1>Vegetarian Menu</h1>
     </div>
 
     <script>
@@ -28,7 +29,7 @@
       displayTheMenu();
 
       async function getTheMenu() {
-        let response = await fetch(host + "/merger");
+        let response = await fetch(host + "/vegetarian");
         let menu = await response.json();
         return menu;
       }
